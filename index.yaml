@@ -2416,13 +2416,13 @@ entries:
   cert-manager-dnsmadeeasy:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-02-13T22:03:28.783841779Z"
+    created: "2021-02-13T22:57:11.526450305Z"
     dependencies:
     - name: common
       repository: https://k8s-at-home.com/charts/
       version: 2.4.0
     description: Cert-Manager Webhook for DNSMadeEasy
-    digest: d9dc8958c7a9501f28d3bbb41e47fda041659591a94e84f23b9c638cf3d7bd7a
+    digest: c78051ec70df67774b0e850d9ae42ed5de1158f0aec9294cffccab01b0d8842f
     home: https://github.com/k8s-at-home/charts/tree/master/charts/home-assistant
     icon: https://pbs.twimg.com/profile_images/1759911243/dnsmeavatar_400x400.png
     keywords:
@@ -2438,8 +2438,8 @@ entries:
     - https://github.com/cdr/code-server
     - https://github.com/k8s-at-home/charts/tree/master/charts/home-assistant
     urls:
-    - https://github.com/angelnu/charts/releases/download/cert-manager-dnsmadeeasy-1.0.0/cert-manager-dnsmadeeasy-1.0.0.tgz
-    version: 1.0.0
+    - https://github.com/angelnu/charts/releases/download/cert-manager-dnsmadeeasy-1.0.1/cert-manager-dnsmadeeasy-1.0.1.tgz
+    version: 1.0.1
   comcast:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -25811,4 +25811,4 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/zwavejs2mqtt-1.0.0/zwavejs2mqtt-1.0.0.tgz
     version: 1.0.0
-generated: "2021-02-13T22:03:48.859348139Z"
+generated: "2021-02-13T14:54:20.561006317Z"
