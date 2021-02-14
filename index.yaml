@@ -5041,6 +5041,26 @@ entries:
     urls:
     - https://github.com/billimek/billimek-charts/releases/download/esphome-1.0.0/esphome-1.0.0.tgz
     version: 1.0.0
+  file-cluster:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-02-14T23:48:53.044650852Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.0
+    description: Creates a PVC using glusterfs and ensure backups
+    digest: 88bd9f1bd4ef569c781355e8a7d6f4b0302d4d0d534595421af61fe432db0a35
+    home: https://github.com/angelnu/charts/tree/master/charts/file-cluster
+    keywords:
+    - gluster
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: file-cluster
+    urls:
+    - https://github.com/angelnu/charts/releases/download/file-cluster-1.0.2/file-cluster-1.0.2.tgz
+    version: 1.0.2
   flaresolverr:
   - apiVersion: v2
     appVersion: v1.2.3
