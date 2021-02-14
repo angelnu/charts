@@ -24815,6 +24815,28 @@ entries:
   tt-rss:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-02-14T18:58:19.556107698Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.0
+    description: Tiny Tiny RSS
+    digest: 300293d6c548856b553ff6b3d838f9084077d9b59e06e2cf383dd1fd4ab21724
+    home: https://github.com/angelnu/charts/tree/master/charts/tt-rss
+    icon: https://community.tt-rss.org/uploads/default/original/1X/18a2e96275d1fffb21cce225d30a87be4544db60.png
+    keywords:
+    - tt-rss
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: tt-rss
+    sources:
+    - https://git.tt-rss.org
+    urls:
+    - https://github.com/angelnu/charts/releases/download/tt-rss-1.0.2/tt-rss-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-02-14T18:25:43.52413688Z"
     dependencies:
     - name: common
