@@ -3,7 +3,7 @@ name: "Charts: Release"
 on:
   push:
     branches:
-      - master
+      - home
     paths:
       - 'charts/**'
       - '!charts/**/README.md'
