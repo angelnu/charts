@@ -1,41 +1,15 @@
 apiVersion: v1
 entries:
-  cert-manager-dnsmadeeasy:
-  - apiVersion: v2
-    appVersion: 1.0.0
-    created: "2021-02-14T04:08:21.969006099Z"
-    dependencies:
-    - name: common
-      repository: https://k8s-at-home.com/charts/
-      version: 3.0.0
-    description: Cert-Manager Webhook for DNSMadeEasy
-    digest: 18ed3b9c614d6d3ae71c88dd1e40faf7f0fc1f8c5d12c30fc42e3ee0765a619f
-    home: https://github.com/angelnu/charts/tree/master/charts/cert-manager-dnsmadeeasy
-    icon: https://pbs.twimg.com/profile_images/1759911243/dnsmeavatar_400x400.png
-    keywords:
-    - cert-manage
-    - dnsmadeeasy
-    - letsencrypt
-    maintainers:
-    - email: git@angelnu.com
-      name: angelnu
-    name: cert-manager-dnsmadeeasy
-    sources:
-    - https://github.com/angelnu/cert-manager-webhook-dnsmadeeasy
-    - https://cert-manager.io
-    urls:
-    - https://github.com/angelnu/charts/releases/download/cert-manager-dnsmadeeasy-1.0.3/cert-manager-dnsmadeeasy-1.0.3.tgz
-    version: 1.0.3
   postgres-cluster:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-02-14T04:08:22.187135293Z"
+    created: "2021-02-14T12:44:49.408302696Z"
     dependencies:
     - name: common
       repository: https://k8s-at-home.com/charts/
       version: 3.0.0
     description: Creates a postgres cluster using Zalando Postgres operator
-    digest: 18d4b80a15a75ad3bc8745dc809f98fcc9f02b3f4f186daa0ecd870ea500d225
+    digest: b863b8f0c0a7145071cebfcf3be3f09c4d1f20b609a7380528436e90725c1ffc
     home: https://github.com/home/charts/tree/master/charts/postgres-cluster
     icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png
     keywords:
@@ -49,6 +23,6 @@ entries:
     sources:
     - https://github.com/zalando/postgres-operator
     urls:
-    - https://github.com/angelnu/charts/releases/download/postgres-cluster-1.0.1/postgres-cluster-1.0.1.tgz
-    version: 1.0.1
-generated: "2021-02-14T04:08:43.340717822Z"
+    - https://github.com/angelnu/charts/releases/download/postgres-cluster-1.0.2/postgres-cluster-1.0.2.tgz
+    version: 1.0.2
+generated: "2021-02-14T12:44:49.296531138Z"
