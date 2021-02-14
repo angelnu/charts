@@ -1,0 +1,28 @@
+#pvcName: defaults to full name
+
+glusterfs: 
+  endpoints: heketi-storage-endpoints
+  #path: defaults to full name
+
+#Size in GiB
+size: 1
+
+heketi:
+  secretNamespace: "kube-system"
+  secretName: "heketi-admin-secret"
+  secretRestUser: "user"
+  secretRestKey: "key"
+  resturl: "http://heketi:8080"
+
+
+
+backup_schedule: "@daily"
+backupPVCPrefix: "backup/db"
+#backupPVCSubpath: "backup/db/myDB"
+#backupPVC: myDBBackup PVC <- required when persistent:true
+
+
+# Dissable Deployment and Service
+controllerType: ""
+service:
+  enabled: false
