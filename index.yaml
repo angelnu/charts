@@ -18091,6 +18091,30 @@ entries:
   postgres-cluster:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-02-14T14:34:46.971200695Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.0
+    description: Creates a postgres cluster using Zalando Postgres operator
+    digest: da3c356e503b0f2e954d79558a81fa4f68a9d89767a03b88d30b00d7213bc017
+    home: https://github.com/home/charts/tree/master/charts/postgres-cluster
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png
+    keywords:
+    - postgres
+    - operator
+    - zalando
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: postgres-cluster
+    sources:
+    - https://github.com/zalando/postgres-operator
+    urls:
+    - https://github.com/angelnu/charts/releases/download/postgres-cluster-1.0.8/postgres-cluster-1.0.8.tgz
+    version: 1.0.8
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-02-14T14:30:00.099288398Z"
     dependencies:
     - name: common
