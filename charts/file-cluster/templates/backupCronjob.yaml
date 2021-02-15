@@ -45,7 +45,7 @@ spec:
           - name: source-volume
             persistentVolumeClaim:
               claimName: {{ include "file-cluster.pvcName" . }}
-            - name: backup-volume
-              persistentVolumeClaim:
-                claimName: {{ .Values.backupPVC }}
+          - name: backup-volume
+            persistentVolumeClaim:
+              claimName: {{ .Values.backupPVC }}
 {{- end -}}
