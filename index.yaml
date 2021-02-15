@@ -5044,6 +5044,25 @@ entries:
   file-cluster:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-02-15T00:33:05.238844773Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.0
+    description: Creates a PVC using glusterfs and ensure backups
+    digest: 89700bc5e82e9c12e355350f0a2cefbc010cdf73d12042319f318a1c7ba378a3
+    home: https://github.com/angelnu/charts/tree/master/charts/file-cluster
+    keywords:
+    - gluster
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: file-cluster
+    urls:
+    - https://github.com/angelnu/charts/releases/download/file-cluster-1.0.4/file-cluster-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-02-15T00:09:40.869562951Z"
     dependencies:
     - name: common
