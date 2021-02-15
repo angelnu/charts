@@ -33,14 +33,13 @@ spec:
                 requests:
                   memory: "10Mi"
                   cpu: "5m"
-              env:
-              volumeMounts:
+            volumeMounts:
             - mountPath: /source
               name: source-volume
               readOnly: true
-              - mountPath: /backup
-                name: backup-volume
-                subPath: {{ include "file-cluster.backupPVCSubpath" . }}
+            - mountPath: /backup
+              name: backup-volume
+              subPath: {{ include "file-cluster.backupPVCSubpath" . }}
           restartPolicy: OnFailure
           volumes:
           - name: source-volume
