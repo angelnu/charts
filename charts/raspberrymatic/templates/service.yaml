@@ -4,6 +4,8 @@ metadata:
   name: {{ include "raspberrymatic.fullname" . }}
   labels:
     {{- include "raspberrymatic.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.service.annotations | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   loadBalancerIP: {{ .Values.service.loadBalancerIP }}
@@ -25,11 +27,11 @@ metadata:
   name: {{ include "raspberrymatic.fullname" . }}-udp
   labels:
     {{- include "raspberrymatic.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.service.annotations | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   loadBalancerIP: {{ .Values.service.loadBalancerIP }}
-  annotations:
-    {{- toYaml .Values.service.annotations | nindent 4 }}
   ports:
   {{- range $port_name, $port_number := .Values.service.ports.UDP }}
   - name: {{ $port_name }}
