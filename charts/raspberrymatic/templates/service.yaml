@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "raspberrymatic.fullname" . }}-UDP
+  name: {{ include "raspberrymatic.fullname" . }}-udp
   labels:
     {{- include "raspberrymatic.labels" . | nindent 4 }}
 spec:
