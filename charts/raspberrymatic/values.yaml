@@ -69,6 +69,7 @@ readinessProbe:
 service:
   type: ClusterIP
   loadBalancerIP: ""
+  annotations : {}
   ports:
     TCP:
       ssh: 22
