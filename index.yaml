@@ -20584,6 +20584,40 @@ entries:
     urls:
     - https://github.com/billimek/billimek-charts/releases/download/radarr-3.0.0/radarr-3.0.0.tgz
     version: 3.0.0
+  raspberrymatic:
+  - annotations:
+      artifacthub.io/changes: |
+        - Release of 3.55.10.20210213
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Webpage
+          url: https://raspberrymatic.de/
+        - name: Documentation
+          url: https://github.com/jens-maus/RaspberryMatic/wiki
+    apiVersion: v2
+    appVersion: 3.55.10.20210213
+    created: "2021-02-16T11:15:39.837266761Z"
+    description: HomeMatic/homematicIP CCU central based on RaspberryMatic
+    digest: c20e0581cf0e8f35659a981f38761bdfccdbe7321848d149f5d6389433144b23
+    home: https://github.com/jens-maus/RaspberryMatic
+    icon: https://raw.githubusercontent.com/jens-maus/RaspberryMatic/master/home-assistant-addon/icon.png
+    keywords:
+    - smarthome
+    - iot
+    - homematic
+    - central
+    maintainers:
+    - email: mail@jens-maus.de
+      name: Jens Maus
+      url: https://github.com/jens-maus
+    - email: helm@angelnu.com
+      name: Angel Nunez Mencias
+      url: https://github.com/angelnu
+    name: raspberrymatic
+    type: application
+    urls:
+    - https://github.com/angelnu/charts/releases/download/raspberrymatic-3.55.10/raspberrymatic-3.55.10.tgz
+    version: 3.55.10
   readarr:
   - apiVersion: v2
     appVersion: 0.1.0.351
