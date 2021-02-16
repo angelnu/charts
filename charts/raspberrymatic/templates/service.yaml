@@ -12,7 +12,7 @@ spec:
   - name: {{ $port_name }}
     port: {{ $port_number }}
     targetPort: {{ $port_number }}
-    protocol: {{ $port_type }}
+    protocol: TCP
   {{- end }}
   selector:
     {{- include "raspberrymatic.selectorLabels" . | nindent 4 }}
@@ -33,7 +33,7 @@ spec:
   - name: {{ $port_name }}
     port: {{ $port_number }}
     targetPort: {{ $port_number }}
-    protocol: {{ $port_type }}
+    protocol: UDP
   {{- end }}
   selector:
     {{- include "raspberrymatic.selectorLabels" . | nindent 4 }}
