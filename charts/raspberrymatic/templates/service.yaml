@@ -28,6 +28,8 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   loadBalancerIP: {{ .Values.service.loadBalancerIP }}
+  annotations:
+    {{- toYaml .Values.service.annotations | nindent 4 }}
   ports:
   {{- range $port_name, $port_number := .Values.service.ports.UDP }}
   - name: {{ $port_name }}
