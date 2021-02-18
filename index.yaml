@@ -11081,6 +11081,17 @@ entries:
     urls:
     - https://github.com/billimek/billimek-charts/releases/download/lidarr-1.0.0/lidarr-1.0.0.tgz
     version: 1.0.0
+  lorawan-server:
+  - apiVersion: v2
+    appVersion: stable
+    created: "2021-02-18T22:13:48.600873947Z"
+    description: A Helm chart for Kubernetes
+    digest: 16e7209f55639b324559260f48fc0c98849411ce8283ca436fbfbd3a07a2dace
+    name: lorawan-server
+    type: application
+    urls:
+    - https://github.com/angelnu/charts/releases/download/lorawan-server-0.1.0/lorawan-server-0.1.0.tgz
+    version: 0.1.0
   lychee:
   - apiVersion: v2
     appVersion: 4.0.8
