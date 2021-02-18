@@ -2569,6 +2569,17 @@ entries:
     urls:
     - https://github.com/angelnu/charts/releases/download/cert-manager-dnsmadeeasy-1.0.3/cert-manager-dnsmadeeasy-1.0.3.tgz
     version: 1.0.3
+  chirpstack-packet-multiplexer:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2021-02-18T21:57:58.253528723Z"
+    description: A Helm chart for Kubernetes
+    digest: 6d8abed5e580a3e739823731a329cc9c98f36fba72ef722af1527dd2b75dcb53
+    name: chirpstack-packet-multiplexer
+    type: application
+    urls:
+    - https://github.com/angelnu/charts/releases/download/chirpstack-packet-multiplexer-0.1.0/chirpstack-packet-multiplexer-0.1.0.tgz
+    version: 0.1.0
   comcast:
   - apiVersion: v2
     appVersion: 1.0.0
