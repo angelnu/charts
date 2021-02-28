@@ -12104,6 +12104,31 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/monica-1.0.0/monica-1.0.0.tgz
     version: 1.0.0
   mosquitto:
+  - apiVersion: v2
+    appVersion: 2.0.7
+    created: "2021-02-28T16:00:59.655063147Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.1
+    description: Eclipse Mosquitto - An open source MQTT broker
+    digest: 48ba5c5ed95715c9caaaaebdcce17144c9ddf3937bddf97843699f2f42e53480
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/mosquitto
+    icon: https://mosquitto.org/images/mosquitto-text-side-28.png
+    keywords:
+    - mosquitto
+    - MQTT
+    - eclipse-iot
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: helm@movishell.pl
+      name: ishioni
+    name: mosquitto
+    sources:
+    - https://github.com/eclipse/mosquitto
+    urls:
+    - https://github.com/angelnu/charts/releases/download/mosquitto-1.0.0/mosquitto-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v1
     appVersion: 2.0.4
     created: "2021-01-10T16:38:40.469614921Z"
@@ -20074,6 +20099,32 @@ entries:
     version: 2.0.1
   radarr:
   - apiVersion: v2
+    appVersion: 3.0.2.4552
+    created: "2021-02-28T16:00:59.756660941Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.1
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: e939b478f8528f92c4224cedc033c5ab14a4da877eb1d35f73535eacd61c37f1
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://hub.docker.com/r/linuxserver/radarr
+    urls:
+    - https://github.com/angelnu/charts/releases/download/radarr-9.1.1/radarr-9.1.1.tgz
+    version: 9.1.1
+  - apiVersion: v2
     appVersion: 3.0.0.3989
     created: "2021-02-13T23:49:50.670048907Z"
     dependencies:
@@ -25445,6 +25496,34 @@ entries:
   tt-rss:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-02-28T16:00:59.860623638Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.0.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.7
+    description: Tiny Tiny RSS is a free and open source web-based news feed (RSS/Atom)
+      reader and aggregator
+    digest: d26f220117beb4bff3054c195fad875c6513331094e4542afe9c690bd350d3f2
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/tt-rss
+    icon: https://git.tt-rss.org/fox/tt-rss/raw/branch/master/images/favicon-72px.png
+    keywords:
+    - tt-rss
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: tt-rss
+    sources:
+    - https://git.tt-rss.org/fox/tt-rss
+    urls:
+    - https://github.com/angelnu/charts/releases/download/tt-rss-1.0.6/tt-rss-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-02-28T01:57:24.202801171Z"
     dependencies:
     - name: common
@@ -28460,4 +28539,4 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/zwavejs2mqtt-1.0.0/zwavejs2mqtt-1.0.0.tgz
     version: 1.0.0
-generated: "2021-02-28T01:57:24.20869656Z"
+generated: "2021-02-28T16:00:59.867103344Z"
