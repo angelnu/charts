@@ -1,0 +1,51 @@
+{{- if .Values.backupPVC -}}
+# ------------------- CronJob ------------------- #
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "common.names.fullname" . }}-backup
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
+spec:
+  schedule: {{ .Values.backup_schedule | quote }}
+  concurrencyPolicy: Replace
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: {{ include "common.names.fullname" . }}-backup
+          labels:
+            {{- include "common.labels.selectorLabels" . | nindent 12 }}
+        spec:
+          containers:
+          - name: backup
+            image: alpine
+            command:
+            - /bin/sh
+            - -ce
+            - |
+              apk add --no-cache rsync
+              echo "$(date) - Start dump"
+              rsync -avxX --del /source/ /backup
+              echo "$(date) - End dump"
+              ls -lh /backup
+            resources: #TBD
+              requests:
+                memory: "10Mi"
+                cpu: "5m"
+            volumeMounts:
+            - mountPath: /source
+              name: source-volume
+              readOnly: true
+            - mountPath: /backup
+              name: backup-volume
+              subPath: {{ include "file-cluster.backupPVCSubpath" . }}
+          restartPolicy: OnFailure
+          volumes:
+          - name: source-volume
+            persistentVolumeClaim:
+              claimName: {{ include "file-cluster.pvcName" . }}
+          - name: backup-volume
+            persistentVolumeClaim:
+              claimName: {{ .Values.backupPVC }}
+{{- end -}}

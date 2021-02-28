@@ -1,9 +1,10 @@
 name: "Charts: Release"
 
 on:
+  workflow_dispatch:
   push:
     branches:
-    - master
+    - home
     paths:
     - 'charts/**'
     - '!charts/**/README.md'
@@ -54,6 +55,6 @@ jobs:
     - name: Run chart-releaser
       uses: helm/chart-releaser-action@v1.2.0
       with:
-        charts_repo_url: https://k8s-at-home.com/charts/
+        charts_repo_url: https://angelnu.github.io/charts/
       env:
         CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

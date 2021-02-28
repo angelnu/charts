@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "common.names.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
+  annotations:
+   {{- .Values.pvAnnotations | toYaml | nindent 4 }}
+
+spec:
+  storageClassName: {{ include "common.names.fullname" . }}
+  capacity:
+    storage: "{{ .Values.size }}Gi"
+  accessModes:
+  - ReadWriteOnce
+  - ReadOnlyMany
+  glusterfs:
+    {{- include "file-cluster.glusterfs" . | nindent 4 }}
+  #Since it is created directly this does not delete it from gluster
+  persistentVolumeReclaimPolicy: Delete
