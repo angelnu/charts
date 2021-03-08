@@ -4864,6 +4864,32 @@ entries:
     urls:
     - https://github.com/angelnu/charts/releases/download/dizquetv-1.1.0/dizquetv-1.1.0.tgz
     version: 1.1.0
+  dnsmadeeasy-webhook:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-03-08T22:45:10.645488478Z"
+    dependencies:
+    - name: common
+      repository: https://k8s-at-home.com/charts/
+      version: 3.1.0
+    description: Cert-Manager Webhook for DNSMadeEasy
+    digest: b99597ded9e3973676cd46ea2a4a538502f3d54ae16c9804cb24d31446fa10a9
+    home: https://github.com/k8s-at-home/dnsmadeeasy-webhook
+    icon: https://pbs.twimg.com/profile_images/1759911243/dnsmeavatar_400x400.png
+    keywords:
+    - cert-manager
+    - dnsmadeeasy
+    - letsencrypt
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: dnsmadeeasy-webhook
+    sources:
+    - https://github.com/k8s-at-home/dnsmadeeasy-webhook
+    - https://cert-manager.io
+    urls:
+    - https://github.com/angelnu/charts/releases/download/dnsmadeeasy-webhook-2.0.0/dnsmadeeasy-webhook-2.0.0.tgz
+    version: 2.0.0
   dsmr-reader:
   - apiVersion: v2
     appVersion: v4.9.0
@@ -30641,4 +30667,4 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/zwavejs2mqtt-1.0.0/zwavejs2mqtt-1.0.0.tgz
     version: 1.0.0
-generated: "2021-03-08T09:32:26.088174217Z"
+generated: "2021-03-08T22:45:10.651082308Z"
