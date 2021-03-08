@@ -38,11 +38,11 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         branch: "helm-docs/ci"
         delete-branch: true
-        title: "chore(update helm-docs) [ci-skip]"
+        title: "chore(docs) update helm-docs [ci-skip]"
         signoff: true
         committer: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
         author: "${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
-        commit-message: "chore(update helm-docs) [ci-skip]"
+        commit-message: "chore(docs) update helm-docs [ci-skip]"
         body: |
           Signed-off-by: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         labels: helm-docs
