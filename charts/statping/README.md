@@ -1,6 +1,6 @@
 # statping
 
-![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![AppVersion: v0.90.65](https://img.shields.io/badge/AppVersion-v0.90.65-informational?style=flat-square)
+![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![AppVersion: v0.90.65](https://img.shields.io/badge/AppVersion-v0.90.65-informational?style=flat-square)
 
 Status page for monitoring your websites and applications
 
@@ -19,7 +19,7 @@ Kubernetes: `>=1.16.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | https://charts.bitnami.com/bitnami | postgresql | 10.3.7 |
-| https://k8s-at-home.com/charts/ | common | 3.1.0 |
+| https://library-charts.k8s-at-home.com | common | 1.0.0 |
 
 ## TL;DR
 

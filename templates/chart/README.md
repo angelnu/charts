@@ -9,7 +9,6 @@ ${CHARTNAME} helm package
 ## Source Code
 
 * <https://github.com/${CHARTNAME}/${CHARTNAME}-docker>
-* <https://github.com/k8s-at-home/charts/tree/master/charts/${CHARTNAME}>
 
 ## Requirements
 
@@ -19,7 +18,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://k8s-at-home.com/charts/ | common | 3.0.1 |
+| https://library-charts.k8s-at-home.com | common | 1.0.0 |
 
 ## TL;DR
 
