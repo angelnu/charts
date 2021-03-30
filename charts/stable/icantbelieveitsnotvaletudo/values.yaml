@@ -1,0 +1,40 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+#
+
+image:
+  repository: pmaksymiuk/icantbelieveitsnotvaletudo
+  pullPolicy: IfNotPresent
+  tag: 2021.2.0
+
+strategy:
+  type: RollingUpdate
+
+config:
+  mapsettings:
+    drawPath: true
+    drawCharger: true
+    drawRobot: true
+    scale: 2
+  mqtt:
+    identifier: "rockrobo"
+    topicPrefix: "valetudo"
+    autoconfPrefix: "homeassistant"
+    broker_url: "mqtt://user:pass@example.com:port"
+    mapDataTopic: "valetudo/rockrobo/map_data"
+    minMillisecondsBetweenMapUpdates: 10000
+    publishMapImage: true
+
+service:
+  enabled: false
+
+probes:
+  liveness:
+    enabled: false
+  readiness:
+    enabled: false
+  startup:
+    enabled: false

@@ -1,0 +1,62 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+#
+
+image:
+  repository: eclipse-mosquitto
+  pullPolicy: IfNotPresent
+  tag: 2.0.7
+
+strategy:
+  type: Recreate
+
+service:
+  type: ClusterIP
+  # loadBalancerIP:
+  annotations: {}
+  port:
+    port: 1883
+    name: mqtt
+
+auth:
+  enabled: false
+
+persistence:
+  data:
+    enabled: false
+    emptyDir:
+      enabled: false
+    mountPath: /mosquitto/data
+    ## Persistent Volume Storage Class
+    ## If defined, storageClassName: <storageClass>
+    ## If set to "-", storageClassName: "", which disables dynamic provisioning
+    ## If undefined (the default) or set to null, no storageClassName spec is
+    ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+    ##   GKE, AWS & OpenStack)
+    # storageClass: "-"
+    accessMode: ReadWriteOnce
+    size: 100Mi
+    ## Do not delete the pvc upon helm uninstall
+    # skipuninstall: false
+    # existingClaim: ""
+  configinc:
+    # a persistent volume to place *.conf mosquitto-config-files in
+    enabled: false
+    emptyDir:
+      enabled: false
+    mountPath: /mosquitto/configinc
+    ## Persistent Volume Storage Class
+    ## If defined, storageClassName: <storageClass>
+    ## If set to "-", storageClassName: "", which disables dynamic provisioning
+    ## If undefined (the default) or set to null, no storageClassName spec is
+    ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+    ##   GKE, AWS & OpenStack)
+    # storageClass: "-"
+    accessMode: ReadWriteOnce
+    size: 100Mi
+    ## Do not delete the pvc upon helm uninstall
+    # skipuninstall: false
+    # existingClaim: ""

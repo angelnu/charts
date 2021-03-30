@@ -1,0 +1,55 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+#
+
+image:
+  repository: tenstartups/ser2sock
+  pullPolicy: IfNotPresent
+  tag: latest
+
+strategy:
+  type: Recreate
+
+env:
+  # TZ:
+  # PUID:
+  # PGID:
+  LISTENER_PORT: 10000
+  BAUD_RATE: 115200
+  SERIAL_DEVICE: "/dev/ttyUSB0"
+
+
+service:
+  port:
+    port: 10000
+
+ingress:
+  enabled: false
+
+# Privileged may be required if USB controller is accessed directly through the host machine
+# securityContext:
+#   privileged: true
+
+# Path to your ser2sock device in the container
+additionalVolumeMounts: []
+#  - name: usb
+#    mountPath: /dev/ttyUSB0
+
+# Path to your ser2sock device on the host
+additionalVolumes: []
+#  - name: usb
+#    hostPath:
+#      path: /dev/ttyUSB0
+
+# affinity:
+#   nodeAffinity:
+#     requiredDuringSchedulingIgnoredDuringExecution:
+#       nodeSelectorTerms:
+#       - matchExpressions:
+#         - key: app
+#           operator: In
+#           values:
+#           - ser2sock-controller

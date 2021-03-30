@@ -9,7 +9,6 @@ ${CHARTNAME} helm package
 ## Source Code
 
 * <https://github.com/${CHARTNAME}/${CHARTNAME}-docker>
-* <https://github.com/k8s-at-home/charts/tree/master/charts/${CHARTNAME}>
 
 ## Requirements
 
@@ -19,7 +18,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://k8s-at-home.com/charts/ | common | 3.0.1 |
+| https://library-charts.k8s-at-home.com | common | 1.0.0 |
 
 ## TL;DR
 
@@ -50,7 +49,7 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](../common/values.yaml) from the [common library](../common).
+Other values may be used from the [values.yaml](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
@@ -72,7 +71,7 @@ N/A
 
 ## Values
 
-**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/charts/tree/master/charts/common/)
+**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
@@ -86,7 +85,7 @@ N/A
 
 ## Changelog
 
-All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/charts/tree/master/charts/common/README.md#Changelog).
+All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common#changelog).
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 

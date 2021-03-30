@@ -1,0 +1,31 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+#
+
+image:
+  repository: hon95/prometheus-nut-exporter
+  pullPolicy: IfNotPresent
+  tag: 1.0.1
+
+strategy:
+  type: Recreate
+
+env: {}
+  # TZ: UTC
+
+service:
+  port:
+    port: 9995
+
+prometheus:
+  serviceMonitor:
+    enabled: false
+    # Specify the list of NUT servers that should be monitored
+    targets: []
+    # - hostname: nut-server
+    #   port: 3493
+    #   interval: 30s
+    #   scrapeTimeout: 10s
