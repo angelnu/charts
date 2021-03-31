@@ -23002,6 +23002,31 @@ entries:
     urls:
     - https://github.com/angelnu/charts/releases/download/postgres-cluster-1.0.1/postgres-cluster-1.0.1.tgz
     version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-03-31T03:14:26.741048323Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.1.0
+    description: Creates a postgres cluster using the Zalando Postgres operator and
+      local storage
+    digest: 12a76a5da49b30c31ac0d21d9cbe800c2f52719fddfda6453e4211b80ecd6f3f
+    home: https://github.com/home/charts/tree/master/charts/postgres-cluster
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png
+    keywords:
+    - postgres
+    - operator
+    - zalando
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: postgres-cluster
+    sources:
+    - https://github.com/zalando/postgres-operator
+    urls:
+    - https://github.com/angelnu/charts/releases/download/postgres-cluster-1.0.0/postgres-cluster-1.0.0.tgz
+    version: 1.0.0
   powerdns:
   - apiVersion: v2
     appVersion: v4.3.1
@@ -35766,4 +35791,4 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/zwavejs2mqtt-1.0.0/zwavejs2mqtt-1.0.0.tgz
     version: 1.0.0
-generated: "2021-03-31T00:31:31.252573385Z"
+generated: "2021-03-31T03:14:26.747192876Z"
