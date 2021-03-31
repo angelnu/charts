@@ -22,8 +22,9 @@ a high available Postgres cluster using nodes local storage.
 Features added by this wrapper:
 - creates an storage class using local storage in the nodes specified in `persistentVolumes.replicaNodes`. These replicas survive
   a tear-down and tear-up of the cluster.
-- (optional) does sql dumps to an existing PVC with K8S cronjobs. The Operator only supports backups to cloud, not NFS PVC for example.
-- Define the password for the DB so that it can be used accross tear-down and tear-up of the cluster.
+- (optional) does sql dumps to an existing PVC with K8S cronjobs. The Operator only supports backups to S3, not NFS PVCs for example,
+  as with this wrapper.
+- define the password for the DB so that it can be kept constant accross tear-down and tear-up of the cluster.
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
 
