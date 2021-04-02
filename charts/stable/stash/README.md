@@ -1,17 +1,15 @@
-# rtorrent-flood
+# stash
 
-![Version: 7.0.0](https://img.shields.io/badge/Version-7.0.0-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
 
-rTorrent is a stable, high-performance and low resource consumption BitTorrent client.
+An organizer for your porn, written in Go
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/jesec/rtorrent>
-* <https://github.com/jesec/flood>
-* <https://hub.docker.com/r/jesec/rtorrent>
-* <https://hub.docker.com/r/jesec/flood>
+* <https://github.com/stashapp/stash>
+* <https://hub.docker.com/r/stashapp/stash>
 
 ## Requirements
 
@@ -28,23 +26,23 @@ Kubernetes: `>=1.16.0-0`
 ```console
 helm repo add k8s-at-home https://k8s-at-home.com/charts/
 helm repo update
-helm install rtorrent-flood k8s-at-home/rtorrent-flood
+helm install stash k8s-at-home/stash
 ```
 
 ## Installing the Chart
 
-To install the chart with the release name `rtorrent-flood`
+To install the chart with the release name `stash`
 
 ```console
-helm install rtorrent-flood k8s-at-home/rtorrent-flood
+helm install stash k8s-at-home/stash
 ```
 
 ## Uninstalling the Chart
 
-To uninstall the `rtorrent-flood` deployment
+To uninstall the `stash` deployment
 
 ```console
-helm uninstall rtorrent-flood
+helm uninstall stash
 ```
 
 The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
@@ -57,15 +55,15 @@ Other values may be used from the [values.yaml](https://github.com/k8s-at-home/l
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install rtorrent-flood \
+helm install stash \
   --set env.TZ="America/New York" \
-    k8s-at-home/rtorrent-flood
+    k8s-at-home/stash
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install rtorrent-flood k8s-at-home/rtorrent-flood -f values.yaml
+helm install stash k8s-at-home/stash -f values.yaml
 ```
 
 ## Custom configuration
@@ -78,28 +76,17 @@ N/A
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| config | string | string | Minimal configuration provided from https://github.com/jesec/rtorrent/blob/master/doc/rtorrent.rc |
-| env.FLOOD_OPTION_ALLOWEDPATH | string | `"/downloads"` |  |
-| env.FLOOD_OPTION_HOST | string | `"0.0.0.0"` |  |
-| env.FLOOD_OPTION_PORT | string | `"3000"` |  |
-| env.FLOOD_OPTION_RTORRENT | string | `"true"` |  |
-| env.HOME | string | `"/config"` |  |
+| env | object | `{}` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"jesec/rtorrent-flood"` |  |
-| image.tag | string | `"latest@sha256:5ff0125ea0e2befbc2ba2f2143e130819db645cb5ef68b44a0712b8162a16f47"` |  |
+| image.repository | string | `"stashapp/stash"` |  |
+| image.tag | string | `"latest"` |  |
 | ingress.enabled | bool | `false` |  |
 | persistence.config.emptyDir.enabled | bool | `false` |  |
 | persistence.config.enabled | bool | `false` |  |
-| persistence.downloads.emptyDir.enabled | bool | `false` |  |
-| persistence.downloads.enabled | bool | `false` |  |
-| service.additionalServices[0].enabled | bool | `true` |  |
-| service.additionalServices[0].nameSuffix | string | `"bittorrent"` |  |
-| service.additionalServices[0].port.name | string | `"bittorrent"` |  |
-| service.additionalServices[0].port.port | int | `6881` |  |
-| service.additionalServices[0].port.protocol | string | `"TCP"` |  |
-| service.additionalServices[0].port.targetPort | int | `6881` |  |
-| service.additionalServices[0].type | string | `"ClusterIP"` |  |
-| service.port.port | int | `3000` |  |
+| persistence.media.emptyDir.enabled | bool | `false` |  |
+| persistence.media.enabled | bool | `false` |  |
+| persistence.media.mountPath | string | `"/media"` |  |
+| service.port.port | int | `9999` |  |
 | strategy.type | string | `"Recreate"` |  |
 
 ## Changelog
@@ -108,7 +95,7 @@ All notable changes to this application Helm chart will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [6.0.0]
+### [1.0.0]
 
 #### Added
 
@@ -116,28 +103,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 #### Changed
 
-- **BREAKING** Migrate rtorrent-flood to the common library, a lot of configuration has changed.
+- N/A
 
 #### Removed
 
 - N/A
 
-### [5.0.1]
-
-#### Added
-
-- N/A
-
-#### Changed
-
-- use helm-docs
-
-#### Removed
-
-- N/A
-
-[6.0.0]: #6.0.0
-[5.0.1]: #5.0.1
+[1.0.0]: #1.0.0
 
 ## Support
 

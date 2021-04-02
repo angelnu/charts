@@ -103,6 +103,42 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Ardetus",
+      "name": "Ardetus",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2253935?v=4",
+      "profile": "https://github.com/Ardetus",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dynamicat",
+      "name": "Chris Golden",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12977282?v=4",
+      "profile": "https://github.com/dynamicat",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "psychopenguin",
+      "name": "Fabio Brito d'Araujo e Oliveira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1420115?v=4",
+      "profile": "https://github.com/psychopenguin",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "allenporter",
+      "name": "Allen Porter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6026418?v=4",
+      "profile": "https://github.com/allenporter",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
