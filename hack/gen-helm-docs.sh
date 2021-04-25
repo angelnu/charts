@@ -6,7 +6,7 @@ set -eu
 
 # require helm-docs
 command -v helm-docs >/dev/null 2>&1 || {
-    echo >&2 "helm-docs is not installed. Aborting."
+    echo >&2 "helm-docs (https://github.com/norwoodj/helm-docs) is not installed. Aborting."
     exit 1
 }
 
@@ -26,11 +26,11 @@ if [ $# -ge 1 ] && [ -n "$1" ] && [ -n "$2" ]; then
     charts="${repository}/charts/$1/$2/Chart.yaml"
     root="$(dirname "${charts}")"
     if [ ! -f "$charts" ]; then
-        echo "File ${charts} does not exist." 
+        echo "File ${charts} does not exist."
         exit 1
     fi
 else
-    root="${repository}"
+    root="${repository}/charts/stable"
 fi
 
 for chart in ${charts}; do

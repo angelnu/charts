@@ -1,6 +1,6 @@
 # xteve
 
-![Version: 5.2.1](https://img.shields.io/badge/Version-5.2.1-informational?style=flat-square) ![AppVersion: 2.1.2.0120](https://img.shields.io/badge/AppVersion-2.1.2.0120-informational?style=flat-square)
+![Version: 6.3.2](https://img.shields.io/badge/Version-6.3.2-informational?style=flat-square) ![AppVersion: v2.2.0.200](https://img.shields.io/badge/AppVersion-v2.2.0.200-informational?style=flat-square)
 
 M3U Proxy for Plex DVR and Emby Live TV.
 
@@ -8,8 +8,8 @@ M3U Proxy for Plex DVR and Emby Live TV.
 
 ## Source Code
 
-* <https://xteve.de>
 * <https://github.com/xteve-project/xTeVe>
+* <https://github.com/k8s-at-home/container-images>
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://library-charts.k8s-at-home.com | common | 1.0.0 |
+| https://library-charts.k8s-at-home.com | common | 2.3.1 |
 
 ## TL;DR
 
@@ -78,10 +78,10 @@ N/A
 |-----|------|---------|-------------|
 | env | object | `{}` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"k8sathome/xteve"` |  |
-| image.tag | string | `"v2.1.2.0120"` |  |
+| image.repository | string | `"ghcr.io/k8s-at-home/xteve"` |  |
+| image.tag | string | `"v2.2.0.200"` |  |
 | ingress.enabled | bool | `false` |  |
-| persistence.config.emptyDir | bool | `false` |  |
+| persistence.config.emptyDir.enabled | bool | `false` |  |
 | persistence.config.enabled | bool | `false` |  |
 | service.port.port | int | `34400` |  |
 | strategy.type | string | `"Recreate"` |  |

@@ -139,6 +139,78 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rasmustwh",
+      "name": "Rasmus Hermansen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2485005?v=4",
+      "profile": "https://github.com/rasmustwh",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "FlipEnergy",
+      "name": "Dennis Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7714381?v=4",
+      "profile": "http://pleasenoddos.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cbergmann",
+      "name": "Clemens Bergmann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112864?v=4",
+      "profile": "https://cbergmann.net",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "n0rad",
+      "name": "Arnaud Lemaire",
+      "avatar_url": "https://avatars.githubusercontent.com/u/541709?v=4",
+      "profile": "http://norad.fr",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dixneuf19",
+      "name": "Julen Dixneuf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1516762?v=4",
+      "profile": "https://github.com/dixneuf19",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "DirtyCajunRice",
+      "name": "Nicholas St. Germain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15788890?v=4",
+      "profile": "https://cajun.pro",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rwaltr",
+      "name": "Ryan Walter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11428125?v=4",
+      "profile": "https://blog.waltr.tech",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ChipWolf",
+      "name": "Chip Wolf ‮",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3164166?v=4",
+      "profile": "https://chipwolf.uk",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

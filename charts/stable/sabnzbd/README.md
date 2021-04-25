@@ -1,6 +1,6 @@
 # sabnzbd
 
-![Version: 5.2.1](https://img.shields.io/badge/Version-5.2.1-informational?style=flat-square) ![AppVersion: 3.1.0](https://img.shields.io/badge/AppVersion-3.1.0-informational?style=flat-square)
+![Version: 7.0.1](https://img.shields.io/badge/Version-7.0.1-informational?style=flat-square) ![AppVersion: v3.2.1](https://img.shields.io/badge/AppVersion-v3.2.1-informational?style=flat-square)
 
 Free and easy binary newsreader
 
@@ -8,8 +8,8 @@ Free and easy binary newsreader
 
 ## Source Code
 
-* <https://hub.docker.com/r/linuxserver/sabnzbd/>
 * <https://sabnzbd.org/>
+* <https://github.com/k8s-at-home/container-images>
 
 ## Requirements
 
@@ -19,7 +19,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://library-charts.k8s-at-home.com | common | 1.0.0 |
+| https://library-charts.k8s-at-home.com | common | 2.3.1 |
 
 ## TL;DR
 
@@ -70,10 +70,7 @@ helm install sabnzbd k8s-at-home/sabnzbd -f values.yaml
 
 **IMPORTANT NOTE:** when installing this chart for the first time you will get the follow message in your browser when trying to access Sabnzbd: `Access denied - Hostname verification failed: sabnzbd.org/hostname-check`
 
-You can do one of two things to solve this issue:
-
-1. Update the `sabnzbd.ini` config file to your `ingress` name and/or `loadBalancerIP` to the `host_whitelist` field and restart the pod, or
-2. Forward the service to your local machine with `kubectl port-forward service/sabnzbd -n default 8080:8080` and update the `host_whitelist` in the Sabnzbd Settings UI
+To address this issue, you can set an environment variable named `HOST_WHITELIST_ENTRIES` with the host(s) you would like added to the `host_whitelist` in the `sabnzbd.ini`
 
 ## Values
 
@@ -83,15 +80,15 @@ You can do one of two things to solve this issue:
 |-----|------|---------|-------------|
 | env | object | `{}` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"linuxserver/sabnzbd"` |  |
-| image.tag | string | `"version-3.1.0"` |  |
+| image.repository | string | `"ghcr.io/k8s-at-home/sabnzbd"` |  |
+| image.tag | string | `"v3.2.1"` |  |
 | ingress.enabled | bool | `false` |  |
-| persistence.config.emptyDir | bool | `false` |  |
+| persistence.config.emptyDir.enabled | bool | `false` |  |
 | persistence.config.enabled | bool | `false` |  |
-| persistence.downloads.emptyDir | bool | `false` |  |
+| persistence.downloads.emptyDir.enabled | bool | `false` |  |
 | persistence.downloads.enabled | bool | `false` |  |
 | persistence.downloads.mountPath | string | `"/downloads"` |  |
-| persistence.media.emptyDir | bool | `false` |  |
+| persistence.media.emptyDir.enabled | bool | `false` |  |
 | persistence.media.enabled | bool | `false` |  |
 | persistence.media.mountPath | string | `"/media"` |  |
 | service.port.port | int | `8080` |  |
@@ -102,6 +99,12 @@ You can do one of two things to solve this issue:
 All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common#changelog).
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [7.0.0]
+
+#### Changed
+
+- **Breaking**: swap linuxserver.io images for k8s@home image
 
 ### [1.0.0]
 
@@ -117,6 +120,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - N/A
 
+[7.0.0]: #7.0.0
 [1.0.0]: #1.0.0
 
 ## Support

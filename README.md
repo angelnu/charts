@@ -1,6 +1,6 @@
 # Helm charts
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![docs](https://img.shields.io/badge/docs-rtfm-yellow?logo=gitbook&logoColor=white&style=for-the-badge)](https://docs.k8s-at-home.com/)
@@ -66,6 +66,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/allenporter"><img src="https://avatars.githubusercontent.com/u/6026418?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Allen Porter</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=allenporter" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/rasmustwh"><img src="https://avatars.githubusercontent.com/u/2485005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rasmus Hermansen</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=rasmustwh" title="Code">💻</a></td>
+    <td align="center"><a href="http://pleasenoddos.com"><img src="https://avatars.githubusercontent.com/u/7714381?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dennis Zhang</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=FlipEnergy" title="Code">💻</a></td>
+    <td align="center"><a href="https://cbergmann.net"><img src="https://avatars.githubusercontent.com/u/112864?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Clemens Bergmann</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=cbergmann" title="Code">💻</a></td>
+    <td align="center"><a href="http://norad.fr"><img src="https://avatars.githubusercontent.com/u/541709?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Arnaud Lemaire</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=n0rad" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dixneuf19"><img src="https://avatars.githubusercontent.com/u/1516762?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julen Dixneuf</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=dixneuf19" title="Code">💻</a></td>
+    <td align="center"><a href="https://cajun.pro"><img src="https://avatars.githubusercontent.com/u/15788890?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicholas St. Germain</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=DirtyCajunRice" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://blog.waltr.tech"><img src="https://avatars.githubusercontent.com/u/11428125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Walter</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=rwaltr" title="Code">💻</a></td>
+    <td align="center"><a href="https://chipwolf.uk"><img src="https://avatars.githubusercontent.com/u/3164166?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chip Wolf ‮</b></sub></a><br /><a href="https://github.com/k8s-at-home/charts/commits?author=ChipWolf" title="Code">💻</a></td>
   </tr>
 </table>
 

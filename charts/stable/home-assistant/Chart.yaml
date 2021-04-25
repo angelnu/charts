@@ -1,8 +1,8 @@
 apiVersion: v2
-appVersion: 2021.3.4
+appVersion: 2021.4.4
 description: Home Assistant
 name: home-assistant
-version: 7.2.1
+version: 8.0.0
 kubeVersion: ">=1.16.0-0"
 keywords:
 - home-assistant
@@ -13,20 +13,20 @@ icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_L
 sources:
 - https://github.com/home-assistant/home-assistant
 - https://github.com/cdr/code-server
-- https://github.com/k8s-at-home/charts/tree/master/charts/home-assistant
+- https://github.com/k8s-at-home/charts/tree/master/charts/stable/home-assistant
 maintainers:
 - name: billimek
   email: jeff@billimek.com
 dependencies:
 - name: common
   repository: https://library-charts.k8s-at-home.com
-  version: 2.1.0
+  version: 2.3.1
 - name: postgresql
-  version: 10.3.7
+  version: 10.3.15
   repository: https://charts.bitnami.com/bitnami
   condition: postgresql.enabled
 - name: mariadb
-  version: 9.3.4
+  version: 9.3.6
   repository: https://charts.bitnami.com/bitnami
   condition: mariadb.enabled
 - name: influxdb
