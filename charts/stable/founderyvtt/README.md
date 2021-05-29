@@ -1,15 +1,14 @@
-# syncthing
+# foundryvtt
 
-![Version: 1.3.0](https://img.shields.io/badge/Version-1.3.0-informational?style=flat-square) ![AppVersion: 1.16.1](https://img.shields.io/badge/AppVersion-1.16.1-informational?style=flat-square)
+![Version: 0.8.3](https://img.shields.io/badge/Version-0.8.3-informational?style=flat-square) ![AppVersion: 0.8.3](https://img.shields.io/badge/AppVersion-0.8.3-informational?style=flat-square)
 
-Open Source Continuous File Synchronization
+An easy-to-deploy Dockerized Foundry Virtual Tabletop server
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/k8s-at-home/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://syncthing.net/>
-* <https://github.com/syncthing/syncthing>
+* <https://github.com/felddy/foundryvtt-docker>
 
 ## Requirements
 
@@ -26,23 +25,23 @@ Kubernetes: `>=1.16.0-0`
 ```console
 helm repo add k8s-at-home https://k8s-at-home.com/charts/
 helm repo update
-helm install syncthing k8s-at-home/syncthing
+helm install foundryvtt k8s-at-home/foundryvtt
 ```
 
 ## Installing the Chart
 
-To install the chart with the release name `syncthing`
+To install the chart with the release name `foundryvtt`
 
 ```console
-helm install syncthing k8s-at-home/syncthing
+helm install foundryvtt k8s-at-home/foundryvtt
 ```
 
 ## Uninstalling the Chart
 
-To uninstall the `syncthing` deployment
+To uninstall the `foundryvtt` deployment
 
 ```console
-helm uninstall syncthing
+helm uninstall foundryvtt
 ```
 
 The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
@@ -55,15 +54,15 @@ Other values may be used from the [values.yaml](https://github.com/k8s-at-home/l
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install syncthing \
+helm install foundryvtt \
   --set env.TZ="America/New York" \
-    k8s-at-home/syncthing
+    k8s-at-home/foundryvtt
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install syncthing k8s-at-home/syncthing -f values.yaml
+helm install foundryvtt k8s-at-home/foundryvtt -f values.yaml
 ```
 
 ## Custom configuration
@@ -76,30 +75,15 @@ N/A
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| env | object | `{}` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"syncthing/syncthing"` |  |
-| image.tag | string | `"1.16.1"` |  |
+| image.repository | string | `"felddy/foundryvtt"` |  |
+| image.tag | string | `"0.8.3"` |  |
 | ingress.enabled | bool | `false` |  |
 | persistence.data.emptyDir.enabled | bool | `false` |  |
 | persistence.data.enabled | bool | `false` |  |
-| persistence.data.mountPath | string | `"/var/syncthing"` |  |
-| service.additionalServices[0].enabled | bool | `true` |  |
-| service.additionalServices[0].externalTrafficPolicy | string | `"Local"` |  |
-| service.additionalServices[0].nameSuffix | string | `"listen"` |  |
-| service.additionalServices[0].port.name | string | `"listen"` |  |
-| service.additionalServices[0].port.port | int | `22000` |  |
-| service.additionalServices[0].port.protocol | string | `"TCP"` |  |
-| service.additionalServices[0].port.targetPort | int | `22000` |  |
-| service.additionalServices[0].type | string | `"NodePort"` |  |
-| service.additionalServices[1].enabled | bool | `true` |  |
-| service.additionalServices[1].externalTrafficPolicy | string | `"Local"` |  |
-| service.additionalServices[1].nameSuffix | string | `"discovery"` |  |
-| service.additionalServices[1].port.name | string | `"discovery"` |  |
-| service.additionalServices[1].port.port | int | `21027` |  |
-| service.additionalServices[1].port.protocol | string | `"UDP"` |  |
-| service.additionalServices[1].port.targetPort | int | `21027` |  |
-| service.additionalServices[1].type | string | `"NodePort"` |  |
-| service.port.port | int | `8384` |  |
+| persistence.data.mountPath | string | `"/data"` |  |
+| service.port.port | int | `30000` |  |
 | strategy.type | string | `"Recreate"` |  |
 
 ## Changelog
@@ -108,40 +92,11 @@ All notable changes to this application Helm chart will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [1.3.0]
-
-#### Added
-
-- N/A
-
-#### Changed
-
-- Updated syncthing container image version to `v1.16.1`.
-- Updated common chart dependency to `2.5.0`.
-
-#### Removed
-
-- N/A
-
-### [1.1.2]
-
-#### Added
-
-- N/A
-
-#### Changed
-
-- Updated icon url.
-
-#### Removed
-
-- N/A
-
 ### [1.0.0]
 
 #### Added
 
-- First version of the helm chart for syncthing
+- Initial version
 
 #### Changed
 
@@ -151,8 +106,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - N/A
 
-[1.3.0]: #1.3.0
-[1.1.2]: #1.1.2
 [1.0.0]: #1.0.0
 
 ## Support
