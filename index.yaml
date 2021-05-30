@@ -3,6 +3,31 @@ entries:
   adguard-home:
   - apiVersion: v2
     appVersion: v0.105.2
+    created: "2021-05-30T17:38:58.387859203Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: DNS proxy as ad-blocker for local network
+    digest: c2aa5184a484100fddb5a3fff1ee5f9fc43dfd40de8cc11e30a6b5dd22587b2a
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    urls:
+    - https://github.com/angelnu/charts/releases/download/adguard-home-3.3.1/adguard-home-3.3.1.tgz
+    version: 3.3.1
+  - apiVersion: v2
+    appVersion: v0.105.2
     created: "2021-05-11T19:42:05.985909988Z"
     dependencies:
     - name: common
@@ -5883,6 +5908,31 @@ entries:
     version: 1.1.0
   dnsmadeeasy-webhook:
   - apiVersion: v2
+    appVersion: 1.1.0
+    created: "2021-05-30T17:38:58.490239942Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: Cert-Manager Webhook for DNSMadeEasy
+    digest: 756e2c2dcc9c51d68cbef9c8ed46c4d0cd5e307e8f106e87d48b2c096242d560
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/dnsmadeeasy-webhook
+    icon: https://pbs.twimg.com/profile_images/1759911243/dnsmeavatar_400x400.png
+    keywords:
+    - cert-manager
+    - dnsmadeeasy
+    - letsencrypt
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: dnsmadeeasy-webhook
+    sources:
+    - https://github.com/k8s-at-home/dnsmadeeasy-webhook
+    - https://cert-manager.io
+    urls:
+    - https://github.com/angelnu/charts/releases/download/dnsmadeeasy-webhook-2.5.0/dnsmadeeasy-webhook-2.5.0.tgz
+    version: 2.5.0
+  - apiVersion: v2
     appVersion: 1.0.0
     created: "2021-05-11T19:42:08.435988544Z"
     dependencies:
@@ -7688,6 +7738,30 @@ entries:
     urls:
     - https://github.com/angelnu/charts/releases/download/focalboard-1.1.0/focalboard-1.1.0.tgz
     version: 1.1.0
+  foundryvtt:
+  - apiVersion: v2
+    appVersion: 0.8.3
+    created: "2021-05-30T17:38:58.590825574Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
+    digest: 1c8542a102df2d93af7aa4cc85097362041e1bf16451deda51d72759a7e68702
+    home: https://github.com/felddy/foundryvtt-docker
+    icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
+    keywords:
+    - foundryvtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: rwalt@pm.me
+      name: rwaltr
+    name: foundryvtt
+    sources:
+    - https://github.com/felddy/foundryvtt-docker
+    urls:
+    - https://github.com/angelnu/charts/releases/download/foundryvtt-0.8.3/foundryvtt-0.8.3.tgz
+    version: 0.8.3
   freshrss:
   - apiVersion: v2
     appVersion: 1.17.0
@@ -8530,6 +8604,32 @@ entries:
     - https://github.com/JasonHHouse/gaps
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/gaps-1.0.0/gaps-1.0.0.tgz
+    version: 1.0.0
+  gollum:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2021-05-30T17:38:58.686965344Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: Gollum is a simple wiki system built on top of Git
+    digest: 48e3b9e3db63c59c2970165b79fae8e9500e83f9fbadd2ab97a7bd032174b420
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/gollum
+    icon: https://gollum.org/icon
+    keywords:
+    - gollum
+    - wiki
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: sanders.chris@gmail.com
+      name: chris-sanders
+    name: gollum
+    sources:
+    - https://github.com/gollum/gollum
+    - https://github.com/gollum/docker
+    urls:
+    - https://github.com/angelnu/charts/releases/download/gollum-1.0.0/gollum-1.0.0.tgz
     version: 1.0.0
   gonic:
   - apiVersion: v2
@@ -9523,6 +9623,45 @@ entries:
     - https://github.com/billimek/billimek-charts/releases/download/heimdall-1.0.1/heimdall-1.0.1.tgz
     version: 1.0.1
   home-assistant:
+  - apiVersion: v2
+    appVersion: 2021.5.5
+    created: "2021-05-30T17:38:58.819334151Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.9
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.1.9
+    description: Home Assistant
+    digest: 1ac8b5be9078f52a6bc631f140bae146faad329ceec1ddea0fe6597b7db2732d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/k8s-at-home/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/angelnu/charts/releases/download/home-assistant-8.3.0/home-assistant-8.3.0.tgz
+    version: 8.3.0
   - apiVersion: v2
     appVersion: 2021.4.4
     created: "2021-05-11T19:42:10.633771319Z"
@@ -16409,6 +16548,30 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/mosquitto-0.3.3/mosquitto-0.3.3.tgz
     version: 0.3.3
+  multus:
+  - apiVersion: v2
+    appVersion: v3.7.1
+    created: "2021-05-30T17:38:59.001994724Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: multus CNI allows multiple NICs per pod
+    digest: 4cb4e22aefadaa4535893030ebf06eeaaf9dcbcc4b3983522a16907647d3c8a8
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/multus
+    icon: https://multus.org/icon
+    keywords:
+    - multus
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: multus
+    sources:
+    - https://github.com/k8snetworkplumbingwg/multus-cni
+    urls:
+    - https://github.com/angelnu/charts/releases/download/multus-1.1.0/multus-1.1.0.tgz
+    version: 1.1.0
   mylar:
   - apiVersion: v2
     appVersion: 0.4.9.5
@@ -30287,6 +30450,35 @@ entries:
     version: 1.0.0
   smarter-device-manager:
   - apiVersion: v2
+    appVersion: 1.20.7
+    created: "2021-05-30T17:38:59.108268891Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: Manage hardware resource allocation without a need for privileged
+      containers
+    digest: 1dea9289647e9e1fac07f1f5378a65255d8b67a1eac652d06b0efb0b85661acb
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/smarter-device-manager
+    icon: https://assets.gitlab-static.net/uploads/-/system/group/avatar/6339043/smarter-sticker-nologo.png
+    keywords:
+    - kubernetes
+    - cluster
+    - hardware
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    - email: 19270832+lazyoldbear@users.noreply.github.com
+      name: lazyoldbear
+    name: smarter-device-manager
+    sources:
+    - https://gitlab.com/arm-research/smarter/smarter-device-manager/
+    - https://github.com/k8s-at-home/charts
+    urls:
+    - https://github.com/angelnu/charts/releases/download/smarter-device-manager-4.0.0/smarter-device-manager-4.0.0.tgz
+    version: 4.0.0
+  - apiVersion: v2
     appVersion: 1.1.2
     created: "2021-05-11T19:42:18.691474419Z"
     dependencies:
@@ -31685,6 +31877,30 @@ entries:
   stash:
   - apiVersion: v2
     appVersion: latest
+    created: "2021-05-30T17:38:59.222285816Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: An organizer for your porn, written in Go
+    digest: bb06a2c87de1693c0e6608c8eb78927d25f51d2e167eae35822c48c25ba51928
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/stash
+    icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
+    keywords:
+    - porn
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: devin.kray@gmail.com
+      name: onedr0p
+    name: stash
+    sources:
+    - https://github.com/stashapp/stash
+    - https://hub.docker.com/r/stashapp/stash
+    urls:
+    - https://github.com/angelnu/charts/releases/download/stash-1.3.1/stash-1.3.1.tgz
+    version: 1.3.1
+  - apiVersion: v2
+    appVersion: latest
     created: "2021-05-11T19:42:19.208371567Z"
     dependencies:
     - name: common
@@ -32067,6 +32283,31 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/statping-1.0.0/statping-1.0.0.tgz
     version: 1.0.0
   syncthing:
+  - apiVersion: v2
+    appVersion: 1.16.1
+    created: "2021-05-30T17:38:59.320994337Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 2.5.0
+    description: Open Source Continuous File Synchronization
+    digest: feb12317d54e30b84b57a28359e021bd996019361bad40e0a409cebca2fe0af2
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/syncthing
+    icon: https://github.com/syncthing/syncthing/raw/main/assets/logo-128.png
+    keywords:
+    - syncthing
+    - file sync
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: dennis.zhang.nrg@gmail.com
+      name: FlipEnergy
+    name: syncthing
+    sources:
+    - https://syncthing.net/
+    - https://github.com/syncthing/syncthing
+    urls:
+    - https://github.com/angelnu/charts/releases/download/syncthing-1.3.0/syncthing-1.3.0.tgz
+    version: 1.3.0
   - apiVersion: v2
     appVersion: 1.15.1
     created: "2021-05-11T19:42:19.485564101Z"
@@ -39174,4 +39415,4 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/zwavejs2mqtt-1.0.0/zwavejs2mqtt-1.0.0.tgz
     version: 1.0.0
-generated: "2021-05-11T19:42:23.447090705Z"
+generated: "2021-05-30T17:38:59.328950407Z"
