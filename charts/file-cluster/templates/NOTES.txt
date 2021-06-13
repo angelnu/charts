@@ -1,1 +1,0 @@
-Volume Claim {{ include "file-cluster.pvcName" . }} with {{ .Values.size }} created.
