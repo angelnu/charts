@@ -9,6 +9,65 @@ All notable changes to this application Helm chart will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### [3.1.0]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- Upgrade to webhook 1.2 which uses cert-manager 1.4 and k8s-api 1.21.1
+- Grant additional permisions required by webhook since K8S 1.20
+
+#### Removed
+
+- N/A
+
+### [3.0.3]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- fix webhook port names to match probes
+
+#### Removed
+
+- N/A
+
+### [3.0.1]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- fix service and arguments syntax
+
+#### Removed
+
+- N/A
+
+### [3.0.0]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- **BREAKING**: Upgraded the common library dependency to version 3.1.0. This introduces several breaking changes (`service`, `ingress` and `persistence` keys have been refactored).
+  Be sure to check out the [library chart](https://github.com/k8s-at-home/library-charts/blob/common-3.1.0/charts/stable/common/) for the up-to-date values.
+- moved harcoded values into common.tpl
+
+#### Removed
+
+- N/A
+
 ### [1.0.0]
 
 #### Added
